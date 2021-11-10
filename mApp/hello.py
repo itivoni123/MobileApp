@@ -2,14 +2,12 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-import kivy
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
+from kivy.lang import Builder
+
+Builder.load_file('my.kv')
 
 
 class MyGridLayout(Widget):
@@ -36,7 +34,7 @@ class MyGridLayout(Widget):
         self.age.text = ""
 
 
-class Myapp(App):
+class DJApp(App):
     def build(self):
         return MyGridLayout()
 # def print_hi(name):
@@ -46,6 +44,6 @@ class Myapp(App):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    Myapp().run()
+    DJApp().run()
     # print_hi('PyCharm')
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
