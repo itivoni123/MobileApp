@@ -1,0 +1,27 @@
+<Button>
+    font_size: 32
+    background_normal: ''
+    background_color: (0,0,1,1)
+
+<TextInput>
+    background_color: (150/250,150/250,150/250,1)
+
+<MyLayout>
+    canvas.before:
+        Color:
+            rgba: (1,1,1,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding:50
+        spacing:20
+
+        Button:
+            text: "Hello!"
+
+        Button:
+            text: "Yo Yo Yo!"
